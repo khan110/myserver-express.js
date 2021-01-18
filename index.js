@@ -8,7 +8,7 @@ app.listen(PORT, (req, res)=>{
     console.log('server is runnig' )
 })
 
-app.get ("/", (req,res)=>{
+/*app.get ("/", (req,res)=>{
   res.send('<h1>Welcome to Home</h1>')
 })
 
@@ -20,4 +20,7 @@ app.get ("/signup", (req,res)=>{
 
  app.get("/signin", (req,res)=>{
      res.sendFile(path.join(__dirname,'public','signin.html'))
- })
+ })*/
+ 
+
+ app.use(express.static(path.join(__dirname,'public')))
